@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "<project-name>"
+version = "0.0.1"
+description = ""
+authors = ["You <you@email.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.group.dev.dependencies]
+# Pinning black, pycln, isort, flake8, and mypy since they are also used in .pre-commit-config.yaml; if they are updated
+# here they must also be updated there.
+black = "23.12.1"
+pycln = "2.4.0"
+isort = "5.13.2"
+flake8 = "6.1.0"
+mypy = "1.8.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
+
+[tool.isort]
+profile = "black"
+line_length = 120
